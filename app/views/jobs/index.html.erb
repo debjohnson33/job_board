@@ -8,8 +8,8 @@
     </thead>
     <% @jobs.each do |job| %>
         <tr>
-        <td><%= job.title %></td>
-        <td><%= job.description %></td>
+        <td><%= job.title %>&nbsp;&nbsp;</td>
+        <td><%= job.description %>&nbsp;&nbsp;</td>
         <td><h5><%= link_to "Show Posting", job_path(job)%></h5></td>
         </tr>
     <% end %>
