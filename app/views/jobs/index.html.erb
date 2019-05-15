@@ -2,11 +2,11 @@
 
 <table>
     <thead>
-        <th><%= link_to "Job Title", :sort => "title" %></th>
-        <th><%= link_to "Job Description", :sort => "description" %></th>
+        <th><%= sortable "title", "Job Title" %></th>
+        <th><%= sortable "description", "Job Description" %></th>
         <th>More Information</th>
     </thead>
-    <% @jobs.each do |job| %>
+    <% for job in @jobs %>
         <tr>
         <td><%= job.title %>&nbsp;&nbsp;</td>
         <td><%= job.description %>&nbsp;&nbsp;</td>
