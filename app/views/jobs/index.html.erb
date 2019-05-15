@@ -2,8 +2,8 @@
 
 <table>
     <thead>
-        <th>Job Title</th>
-        <th>Job Description</th>
+        <th><%= link_to "Job Title", :sort => "title" %></th>
+        <th><%= link_to "Job Description", :sort => "description" %></th>
         <th>More Information</th>
     </thead>
     <% @jobs.each do |job| %>
