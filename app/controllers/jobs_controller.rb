@@ -12,8 +12,13 @@ class JobsController < ApplicationController
     end
 
     def create
-        Job.create(job_params)
-        redirect_to jobs_path
+        job = Job.new(job_params)
+        if job.save
+            flash[:notice] = "New job was added."
+            redirect_to job_path(job)
+        else
+            render :new
+        end 
     end
 
     def edit
