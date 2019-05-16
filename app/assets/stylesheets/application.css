@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+table.pretty {
+    border-collapse: collapse;
+}
+
+.pretty td, .pretty th {
+    padding: 4px 10px;
+    border: solid 1px #AAA;
+}
+
+.pretty th .current {
+    padding-right: 12px;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.pretty th a.current.asc {
+    background-image: url('../images/up_arrow.png');
+    width: 5px;
+    height: 5px;
+} 
+
+.pretty th a.current.desc {
+    background-image: url('../images/down_arrow.jpg');
+    width: 5px;
+    height: 5px;
+}
