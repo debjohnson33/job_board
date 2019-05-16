@@ -5,12 +5,14 @@
         <th><%= sortable "title", "Job Title" %></th>
         <th><%= sortable "description", "Job Description" %></th>
         <th>More Information</th>
+        <th>Tags</th>
     </thead>
     <% for job in @jobs %>
         <tr>
         <td><%= job.title %>&nbsp;&nbsp;</td>
         <td><%= job.description %>&nbsp;&nbsp;</td>
         <td><h5><%= link_to "Show Posting", job_path(job)%></h5></td>
+        <td><%= job.tag_list %></td>
         </tr>
     <% end %>
 </table>
