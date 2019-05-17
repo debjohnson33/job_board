@@ -19,7 +19,7 @@ table.pretty {
 
 .pretty td, .pretty th {
     padding: 4px 10px;
-    border: solid 1px #AAA;
+    border: solid 5px black;
 }
 
 .pretty th .current {
