@@ -1,7 +1,11 @@
 class JobsController < ApplicationController
     helper_method :sort_column, :sort_direction
     def index
-        @jobs = Job.order(sort_column + " " + sort_direction)
+        if params[:tag]
+            @jobs = Job.tagged_with(params[:tag])
+        else
+            @jobs = Job.order(sort_column + " " + sort_direction)
+        end
     end
 
     def show
